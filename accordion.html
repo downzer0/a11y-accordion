@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Accordions</title>
+  <link rel="stylesheet" href="css/deque.css" />
+</head>
+<body class="deque">
+<div class="accordion lefthandnav menu">
+  <ul role="navigation" aria-label="Page">
+    <li class="level1 parent">
+      <button aria-pressed="false" aria-controls="navigationPanel3-a" id="navigationHeader3-a" class="category-title">Nav Item Header</button>
+      <span class="arrow"></span>
+
+      <ul class="subnav" id="navigationPanel3-a" aria-labelledby="navigationHeader3-a" role="group">
+        <li>
+          <a href="#section_2">Default Sub Nav Item</a>
+        </li>
+        <li class="level2 parent">
+          <button aria-pressed="false" aria-controls="subnavigationPanel3-a" aria-describedby="navigationHeader3-a" id="subnavigationHeader3-a" class="category-title">Sub Nav Header</button>
+          <span class="arrow"></span>
+
+          <ul class="subnav" id="subnavigationPanel3-a" aria-labelledby="subnavigationHeader3-a" role="group">
+            <li><a href="#section_2">Default Sub Sub Nav Item</a></li>
+            <li><a href="#section_2">Default Sub Nav Item with a Very Long Name That Requires Two Lines</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#sectioNav Item Headern_2">Default Sub Nav Item with a Very Long Name That Requires Two Lines</a>
+        </li>
+      </ul>
+    </li>
+    <li class="parent">
+      <a href="#section_2">
+        <span class="category-title">Default Nav Item</span>
+      </a>
+    </li>
+    <li class="parent">
+      <a href="#section_2">
+        <span class="category-title">Default Nav Item</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<script src="js/accordion.js"></script>
+<script src="js/deque.js"></script>
+</body>
+</html>

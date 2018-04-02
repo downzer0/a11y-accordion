@@ -1,0 +1,113 @@
+.deque {
+  background: white;
+  font-family: sans-serif;
+  font-size: 1em;
+
+  .accordion {
+    max-width: 400px;
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none
+    }
+
+    button,
+    a {
+      display: block;
+      padding: 1em;
+      background: transparent;
+      color: inherit;
+      text-decoration: none;
+      transition: all .5s;
+
+      &:hover,
+      &:focus {
+        background: #f5f5f5;
+        color: blue;
+      }
+
+      &:active {
+        color: inherit;
+      }
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      font-family: sans-serif;
+      font-size: 1em;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    a {
+      width: calc(100% - 2em);
+    }
+
+    .parent {
+      position: relative;
+      transition: all .5s;
+
+      .arrow {
+        position: absolute;
+        display: inline-block;
+        right: 1em;
+        top: 1em;
+        content: '';
+        height: .5em;
+        width: .5em;
+        transform: rotate(45deg);
+        background: transparent;
+        border-bottom: 2px solid #222;
+        border-right: 2px solid #222;
+        transition: all .5s;
+      }
+
+      .subnav {
+        height: 1px;
+        overflow: hidden;
+        transition: all .5s;
+
+        button,
+        a {
+          padding-left: 2em;
+        }
+
+        a {
+          width: calc(100% - 3em);
+        }
+
+        .subnav {
+
+          button,
+          a {
+            padding-left: 3em;
+          }
+
+          a {
+            width: calc(100% - 4em);
+          }
+        }
+      }
+
+      &.is-open {
+        background: #f5f5f5;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .20);
+
+        > button {
+          font-weight: bold;
+        }
+
+        > .subnav {
+          height: auto;
+        }
+
+        > .arrow {
+          transform: rotate(225deg);
+        }
+      }
+    }
+  }
+}

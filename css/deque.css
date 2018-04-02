@@ -1,0 +1,75 @@
+.deque {
+  background: white;
+  font-family: sans-serif;
+  font-size: 1em; }
+  .deque .accordion {
+    max-width: 400px; }
+    .deque .accordion ul,
+    .deque .accordion li {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+    .deque .accordion button,
+    .deque .accordion a {
+      display: block;
+      padding: 1em;
+      background: transparent;
+      color: inherit;
+      text-decoration: none;
+      transition: all .5s; }
+      .deque .accordion button:hover, .deque .accordion button:focus,
+      .deque .accordion a:hover,
+      .deque .accordion a:focus {
+        background: #f5f5f5;
+        color: blue; }
+      .deque .accordion button:active,
+      .deque .accordion a:active {
+        color: inherit; }
+    .deque .accordion button {
+      width: 100%;
+      border: 0;
+      font-family: sans-serif;
+      font-size: 1em;
+      text-align: left;
+      cursor: pointer; }
+    .deque .accordion a {
+      width: calc(100% - 2em); }
+    .deque .accordion .parent {
+      position: relative;
+      transition: all .5s; }
+      .deque .accordion .parent .arrow {
+        position: absolute;
+        display: inline-block;
+        right: 1em;
+        top: 1em;
+        content: '';
+        height: .5em;
+        width: .5em;
+        transform: rotate(45deg);
+        background: transparent;
+        border-bottom: 2px solid #222;
+        border-right: 2px solid #222;
+        transition: all .5s; }
+      .deque .accordion .parent .subnav {
+        height: 1px;
+        overflow: hidden;
+        transition: all .5s; }
+        .deque .accordion .parent .subnav button,
+        .deque .accordion .parent .subnav a {
+          padding-left: 2em; }
+        .deque .accordion .parent .subnav a {
+          width: calc(100% - 3em); }
+        .deque .accordion .parent .subnav .subnav button,
+        .deque .accordion .parent .subnav .subnav a {
+          padding-left: 3em; }
+        .deque .accordion .parent .subnav .subnav a {
+          width: calc(100% - 4em); }
+      .deque .accordion .parent.is-open {
+        background: #f5f5f5;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
+        .deque .accordion .parent.is-open > button {
+          font-weight: bold; }
+        .deque .accordion .parent.is-open > .subnav {
+          height: auto; }
+        .deque .accordion .parent.is-open > .arrow {
+          transform: rotate(225deg); }
